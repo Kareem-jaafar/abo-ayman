@@ -1,6 +1,25 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
+  <!-- Event snippet for انقر للاتصال conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18582163046/-4GGCJrelbsdEOac1ZxF',
+      'value': 1.0,
+      'currency': 'EGP',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-T88MPQZF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
